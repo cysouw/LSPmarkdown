@@ -9,6 +9,5 @@ bibliography: latex/localbibliography.bib
 lang: en-US
 
 # remove the following to remove link colour
-
 colorlinks: true
 linkcolor: blue
