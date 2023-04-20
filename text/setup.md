@@ -2,7 +2,7 @@
 
 ## Markdown philosophy
 
-This directory is a skeleton to write a monograph for *Language Science Press* (LSP) in Markdown. [~~Markdown~~](https://daringfireball.net/projects/markdown/) was introduced by John Gruber as a easy-to-use method to write content for webpages. The principles have spread widely and are formally codified as [~~Commonmark~~](https://commonmark.org). The basic idea is to make it easy to write content, while the details of the formatting are added by an automatic conversion. 
+This directory is a skeleton to write a monograph for [*Language Science Press* (LSP)](https://langsci-press.org) in Markdown. [~~Markdown~~](https://daringfireball.net/projects/markdown/) was introduced by John Gruber as a easy-to-use method to write content for webpages. The principles have spread widely and are formally codified as [~~Commonmark~~](https://commonmark.org). The basic idea is to make it easy to write content, while the details of the formatting are added by an automatic conversion. 
 
 This possibilities of this automatic conversion has been greatly extended by [~~Pandoc~~](https://pandoc.org) as introduced and maintained by John MacFarlane. Pandoc can convert between dozens of different output formats, allowing for a great freedom for the visual display of your text. Pandoc also offers many extensions to the rather basic possibilities of the original markdown/commonmark proposals. Pandoc also has a robust system to add functionality through additional modules (called 'filters') when needed. 
 
@@ -31,7 +31,7 @@ Currently, the free editor [~~Visual Studio Code~~](https://code.visualstudio.co
 
 In all modern editors (like Visual Studio Code) it is possible to open a complete directory/folder, so it becomes easy to switch between editing the different files in the LSPmarkdown directory. The current LSPmarkdown directory should be the starting point of your book. Simply rename the directory to your liking and change the current content (which is only included as an example). 
 
-If you want to convert your text to any of the LSP-based outputs you will need to install some additional software. This can be done through a package manager like [`Homebrew`](https://brew.sh) for macOS. However, it might be easiest for new users to simple install the following three pieces of software separately:
+If you want to convert your text to any of the LSP-based outputs you will need to install some additional software. This can be done through a package manager like [`Homebrew`](https://brew.sh) for macOS. However, it might be easiest for new users to simple install the following pieces of software separately:
 
 - **Pandoc**, install instructions at <https://pandoc.org/installing.html>
 - **pandoc-crossref**, install instructions at <https://github.com/lierdakil/pandoc-crossref>.
