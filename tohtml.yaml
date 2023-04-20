@@ -1,0 +1,40 @@
+# pandoc 'defaults'
+
+from: markdown
+to: html
+output-file: docs/index.html
+
+# uncomment the first line below to add copyight-info at the start of the HTML file
+# copyright-info can be edited in the file 'settings/LSP-copyright.md'
+
+defaults:
+# - settings/pre.yaml 
+- 2_CONTENTS.yaml
+- settings/post.yaml
+
+filters:
+- filters/setdate.lua
+- filters/inline-footnotes.lua
+- filters/strikeout-to-smallcaps.lua
+- filters/toc-css.lua
+- filters/count-para.lua
+- filters/pandoc-ling.lua
+- pandoc-crossref
+- filters/crossref-adapt.lua
+- citeproc
+
+metadata-files:
+- 1_TITLEPAGE.yaml
+- 3_SETTINGS.yaml
+- settings/LSPhtml-settings.yaml
+- settings/LSP-css.yaml
+
+# pandoc-native functionalities
+
+number-sections: true
+table-of-contents: true
+standalone: true
+self-contained: true
+default-image-extension: svg
+wrap: preserve
+template: settings/LSP-html.template

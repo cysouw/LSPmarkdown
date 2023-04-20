@@ -1,0 +1,14 @@
+# These are just the user-facing settings
+# More settings in the directory `settings`
+# However, those additionaly settings should prefereably not be changed
+
+# location of the bibliography file
+bibliography: latex/localbibliography.bib
+
+# language for hyphenation
+lang: en-US
+
+# remove the following to remove link colour
+
+colorlinks: true
+linkcolor: blue

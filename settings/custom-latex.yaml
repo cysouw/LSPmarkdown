@@ -1,0 +1,30 @@
+# latex settings
+
+documentclass: book
+classoption: twoside
+papersize: a4
+indent: true
+
+header-includes:
+# Latex preamble details just for this document
+- |
+  ```{=latex}
+  % adding preamble settings to pandoc defaults
+
+  % set small indentation
+  \setlength\parindent{2ex} 
+
+  % remove "p" option, default pandoc to latex uses [htbp]
+  \usepackage{float}
+  \floatplacement{figure}{htb} 
+
+  % to get small subsection in TOC
+  \usepackage{tocloft}
+  \renewcommand{\cftsubsecfont}{\scriptsize} 
+
+  % simpler pageheader
+  \renewcommand{\chaptermark}[1]{ \markboth{#1}{} }
+  \renewcommand{\sectionmark}[1]{ \markright{#1}{} }
+
+  ```
+

@@ -1,0 +1,10 @@
+# List here the markdown files to be included
+# They should be listed in order of appearance
+
+# Prefereably, add all markdown-files to the directory 'text'
+# However, technically these files can be anywhere in this directory
+
+input-files:
+- text/setup.md
+- text/markdown.md
+- text/conversion.md

@@ -1,0 +1,36 @@
+# main settings
+
+documentclass: book
+top-level-division: chapter
+
+# pandoc-crossref settings
+
+secPrefix: 
+  - Sec­tion
+  - Sec­tions
+tblPrefix:
+  - Table
+  - Tables
+figPrefix:
+  - Figure
+  - Figures
+pairDelim: "-"
+chapters: true
+linkReferences: true
+setLabelAttribute: true
+
+# pandoc-ling settings
+
+addChapterNumber: true
+xrefSuffixSep: ""
+latexPackage: langsci-gb4e
+formatGloss: true
+
+# count-para settings
+
+resetAtChapter: true
+
+# citeproc settings
+
+citation-style: settings/unified.csl
+link-citations: true

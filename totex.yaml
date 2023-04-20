@@ -1,0 +1,28 @@
+# pandoc 'defaults'
+
+from: markdown
+to: latex
+output-file: latex/chapters/all.tex
+
+defaults:
+- 2_CONTENTS.yaml
+- settings/post.yaml
+
+filters:
+- filters/strikeout-to-smallcaps.lua
+- filters/count-para.lua
+- filters/pandoc-ling.lua
+- pandoc-crossref
+- citeproc
+
+metadata-files:
+- 1_TITLEPAGE.yaml
+- 3_SETTINGS.yaml
+- settings/LSPtex-settings.yaml
+
+# pandoc-native functionalities
+
+number-sections: true
+table-of-contents: false
+standalone: false
+default-image-extension: pdf

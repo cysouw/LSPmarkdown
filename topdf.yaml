@@ -1,0 +1,31 @@
+# pandoc 'defaults'
+
+from: markdown
+to: pdf
+pdf-engine: xelatex
+output-file: docs/book.pdf
+
+defaults:
+- 2_CONTENTS.yaml
+- settings/post.yaml
+
+filters:
+- filters/setdate.lua
+- filters/strikeout-to-smallcaps.lua
+- filters/count-para.lua
+- filters/pandoc-ling.lua
+- pandoc-crossref
+- citeproc
+
+metadata-files:
+- 1_TITLEPAGE.yaml
+- 3_SETTINGS.yaml
+- settings/LSPhtml-settings.yaml
+- settings/custom-latex.yaml
+
+# pandoc-native functionalities
+
+number-sections: true
+table-of-contents: true
+standalone: true
+default-image-extension: pdf

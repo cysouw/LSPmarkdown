@@ -1,0 +1,39 @@
+# main settings
+
+mainfont: Libertinus Serif
+top-level-division: chapter
+toc-title: Contents
+margin-left: 4cm
+margin-right: 4cm
+
+# pandoc-crossref settings
+
+secPrefix: 
+  - Sec­tion
+  - Sec­tions
+tblPrefix:
+  - Table
+  - Tables
+figPrefix:
+  - Figure
+  - Figures
+pairDelim: "-"
+chapters: true
+linkReferences: true
+setLabelAttribute: true
+
+# pandoc-ling settings
+
+addChapterNumber: true
+xrefSuffixSep: " "
+latexPackage: gb4e
+formatGloss: true
+
+# count-para settings
+
+resetAtChapter: true
+
+# citeproc settings
+
+citation-style: settings/unified.csl
+link-citations: true

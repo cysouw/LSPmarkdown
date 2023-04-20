@@ -1,0 +1,200 @@
+# fine-tuning for LSP html output
+# take pandoc defaults and add some further specifications
+
+header-includes:
+# CSS details just for this LSP document
+- |
+  ```{=html}
+  <!-- CSS added specifically for this LSP document -->
+  <style>
+  html {
+    font-size: 14pt;
+    line-height: 1.5;
+  }
+  body {
+    word-wrap: break-word;
+  }
+  h1 {
+    margin-top: 5em;
+  }
+  h4 {
+    font-size: 1.17em;
+    margin-bottom: 0em;
+  }
+  h5 {
+    margin-top: 0.5em;
+    margin-bottom: -0.5em;
+    font-style: normal;
+  }
+  h1, h2, h3 {
+    text-indent: -50px;
+    padding-left: 50px;
+  }
+  #title-block-header {
+    text-indent: 0;
+    font-family: Arimo;
+    color: white;
+    background-color: grey;
+    text-align: left;
+  }
+  .title {
+    padding-top: 30px;
+    padding-left: 30px;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-indent: 0px;
+    font-size: 3.5em;
+    font-weight: normal;
+    line-height: 1;
+  }
+  .subtitle {
+    padding-top: 20px;
+    padding-left: 30px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.5em;
+  }
+  .edition {
+    padding-top: 10px;
+    padding-left: 30px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-style: italic;
+    font-size: 1em;
+  }
+  .author {
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-bottom: 50px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: Libertinus Serif;
+    font-size: 1.5em;
+  }
+  .notice {
+    padding-top: 20px;
+    padding-left: 30px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 2em;
+  }
+  .date {
+    padding-left: 30px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 2em;
+  }
+  .series {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    padding-right: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1em;
+  }
+  .series:before{
+    content: "█▌ ";
+  }
+  .series:after{
+    content: url("settings/LSP-logo.svg");
+    float: right;
+  }
+  .header-section-number {
+    padding-right: 0.2em;
+  }
+  header {
+    margin-bottom: 1em;
+  }
+  .copyright{
+    font-size: 0.7em;
+    text-align: left;
+    margin-right: 30%;
+  }
+  #toc-title {
+    text-indent: 0px;
+    margin-left: 0px;
+    padding-left: 0px;
+  }
+  p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+  ol, ul {
+    margin-top: 0.5em;
+  }
+  img {
+    width: 100%;
+  }
+  figure {
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+  }
+  figcaption {
+    text-align: center;
+  }
+  a:link {
+    text-decoration: none; 
+  }
+  a:hover { 
+    text-decoration: underline; 
+  }
+  .footnote-ref {
+    font-size: small;
+  }
+  sup {
+    vertical-align: top;
+  }
+  div[id^="tbl"] table {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media (max-width: 900px) {
+    body {
+      font-size: 75%;
+    }
+  }
+  </style>
+  ```
+# Webfont links. 
+# data-external="1" does not include the fonts with pandoc --self-contained
+- |
+  ```{=html}
+  <!-- Links for using webfont -->
+  <link href="https://fonts.cdnfonts.com/css/libertinus-serif" rel="stylesheet" data-external="1">
+  <link href="https://fonts.cdnfonts.com/css/arimo" rel="stylesheet" data-external="1">
+  ```
+# hyphenation settings as suggested by:
+# https://medium.com/clear-left-thinking/all-you-need-to-know-about-hyphenation-in-css-2baee2d89179
+- |
+  ```{=html}
+  <!-- Text justification with hyphenation -->
+  <style>
+  p {
+    text-align: justify;
+  }
+  p {
+  -webkit-hyphens: auto;
+  -webkit-hyphenate-limit-before: 3;
+  -webkit-hyphenate-limit-after: 3;
+  -webkit-hyphenate-limit-chars: 6 3 3;
+  -webkit-hyphenate-limit-lines: 2;
+  -webkit-hyphenate-limit-last: always;
+  -webkit-hyphenate-limit-zone: 8%;
+  -moz-hyphens: auto;
+  -moz-hyphenate-limit-chars: 6 3 3;
+  -moz-hyphenate-limit-lines: 2;
+  -moz-hyphenate-limit-last: always;
+  -moz-hyphenate-limit-zone: 8%;
+  -ms-hyphens: auto;
+  -ms-hyphenate-limit-chars: 6 3 3;
+  -ms-hyphenate-limit-lines: 2;
+  -ms-hyphenate-limit-last: always;
+  -ms-hyphenate-limit-zone: 8%;
+  hyphens: auto;
+  hyphenate-limit-chars: 6 3 3;
+  hyphenate-limit-lines: 2;
+  hyphenate-limit-last: always;
+  hyphenate-limit-zone: 8%;
+  }
+  </style>
+  ```
