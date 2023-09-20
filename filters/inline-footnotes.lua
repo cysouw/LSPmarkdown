@@ -51,12 +51,12 @@ padding-left: 2px;
 font-weight: bold;
 }
 .fn-number:before{
-  content: '▸ ';
+  content: '▸ ';
   vertical-align: text-top;
   font-size: small;
 }
 .fn-number:has(+ input[type=checkbox][id^=fn]:checked):before{
-  content: '▾ ';
+  content: '▾ ';
   vertical-align: text-top;
   font-size: small;
   }
