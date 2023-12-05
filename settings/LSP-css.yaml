@@ -29,6 +29,7 @@ header-includes:
   h1, h2, h3 {
     text-indent: -50px;
     padding-left: 50px;
+    hyphens: none;
   }
   #title-block-header {
     text-indent: 0;
