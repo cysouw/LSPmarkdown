@@ -52,12 +52,12 @@ font-weight: bold;
 }
 .fn-number:before{
   content: '▸ ';
-  vertical-align: text-top;
+  vertical-align: super;
   font-size: small;
 }
 .fn-number:has(+ input[type=checkbox][id^=fn]:checked):before{
   content: '▾ ';
-  vertical-align: text-top;
+  vertical-align: super;
   font-size: small;
   }
 @media (max-width: 900px) {
